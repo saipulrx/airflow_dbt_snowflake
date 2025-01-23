@@ -3,7 +3,7 @@ northwind:
     dev:
       account: yw36449.ap-southeast-1
       database: dbt_dev
-      password: <yourpassword>
+      password: <your_password>
       role: dbt_dev_role
       schema: public
       threads: 200

@@ -2556,3 +2556,243 @@ from source
 [0m09:57:33.724365 [debug] [MainThread]: Command `dbt run` succeeded at 09:57:33.724293 after 3.65 seconds
 [0m09:57:33.724740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5893c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5ae5220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5843f50>]}
 [0m09:57:33.725465 [debug] [MainThread]: Flushing usage events
+[0m15:01:28.734864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a504aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9aef1760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9aef3590>]}
+
+
+============================== 15:01:28.740609 | 062bb219-9e57-4a33-96d0-9b82e30714a0 ==============================
+[0m15:01:28.740609 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:01:28.740990 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/include/dbt/northwind/logs', 'debug': 'False', 'profiles_dir': '/opt/airflow/include/dbt/northwind', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select mart', 'send_anonymous_usage_stats': 'True'}
+[0m15:01:29.953202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f72c2c0>]}
+[0m15:01:29.998097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e4fa420>]}
+[0m15:01:29.998954 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m15:01:30.062878 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m15:01:30.156864 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m15:01:30.157676 [debug] [MainThread]: Partial parsing: added file: northwind://models/mart/mart_sum_price_by_product.sql
+[0m15:01:30.157964 [debug] [MainThread]: Partial parsing: added file: northwind://models/mart/mart_top_customer_buy.sql
+[0m15:01:30.158309 [debug] [MainThread]: Partial parsing: added file: northwind://models/schema.yml
+[0m15:01:30.325956 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m15:01:30.327637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ed7e3c0>]}
+[0m15:01:30.456792 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.northwind.example
+[0m15:01:30.464626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d6fce00>]}
+[0m15:01:30.552081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d6fdaf0>]}
+[0m15:01:30.555270 [info ] [MainThread]: Found 19 seeds, 9 models, 2 data tests, 1 source, 459 macros
+[0m15:01:30.555873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d58f6e0>]}
+[0m15:01:30.559232 [info ] [MainThread]: 
+[0m15:01:30.559746 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:01:30.563732 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_dev'
+[0m15:01:30.573858 [debug] [ThreadPool]: Using snowflake connection "list_dbt_dev"
+[0m15:01:30.574245 [debug] [ThreadPool]: On list_dbt_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "connection_name": "list_dbt_dev"} */
+show terse schemas in database dbt_dev
+    limit 10000
+[0m15:01:30.574458 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:01:31.534912 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.960 seconds
+[0m15:01:31.536748 [debug] [ThreadPool]: On list_dbt_dev: Close
+[0m15:01:31.613002 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_dev, now list_dbt_dev_public)
+[0m15:01:31.618501 [debug] [ThreadPool]: Using snowflake connection "list_dbt_dev_public"
+[0m15:01:31.618782 [debug] [ThreadPool]: On list_dbt_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "connection_name": "list_dbt_dev_public"} */
+show objects in dbt_dev.public limit 10000
+[0m15:01:31.618946 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:01:31.918993 [debug] [ThreadPool]: SQL status: SUCCESS 26 in 0.300 seconds
+[0m15:01:31.920804 [debug] [ThreadPool]: On list_dbt_dev_public: Close
+[0m15:01:32.054025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d58f2f0>]}
+[0m15:01:32.054759 [info ] [MainThread]: Concurrency: 200 threads (target='dev')
+[0m15:01:32.055085 [info ] [MainThread]: 
+[0m15:01:32.110875 [debug] [Thread-1 (]: Began running node model.northwind.mart_sum_price_by_product
+[0m15:01:32.111491 [debug] [Thread-2 (]: Began running node model.northwind.mart_top_customer_buy
+[0m15:01:32.112105 [info ] [Thread-1 (]: 1 of 2 START sql view model public.mart_sum_price_by_product ................... [RUN]
+[0m15:01:32.113594 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbt_dev_public, now model.northwind.mart_sum_price_by_product)
+[0m15:01:32.114045 [debug] [Thread-1 (]: Began compiling node model.northwind.mart_sum_price_by_product
+[0m15:01:32.112447 [info ] [Thread-2 (]: 2 of 2 START sql view model public.mart_top_customer_buy ....................... [RUN]
+[0m15:01:32.120513 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.northwind.mart_top_customer_buy'
+[0m15:01:32.121096 [debug] [Thread-2 (]: Began compiling node model.northwind.mart_top_customer_buy
+[0m15:01:32.129514 [debug] [Thread-2 (]: Writing injected SQL for node "model.northwind.mart_top_customer_buy"
+[0m15:01:32.126685 [debug] [Thread-1 (]: Writing injected SQL for node "model.northwind.mart_sum_price_by_product"
+[0m15:01:32.131354 [debug] [Thread-2 (]: Began executing node model.northwind.mart_top_customer_buy
+[0m15:01:32.137595 [debug] [Thread-1 (]: Began executing node model.northwind.mart_sum_price_by_product
+[0m15:01:32.210230 [debug] [Thread-1 (]: Writing runtime sql for node "model.northwind.mart_sum_price_by_product"
+[0m15:01:32.214138 [debug] [Thread-2 (]: Writing runtime sql for node "model.northwind.mart_top_customer_buy"
+[0m15:01:32.216403 [debug] [Thread-1 (]: Using snowflake connection "model.northwind.mart_sum_price_by_product"
+[0m15:01:32.216756 [debug] [Thread-1 (]: On model.northwind.mart_sum_price_by_product: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "node_id": "model.northwind.mart_sum_price_by_product"} */
+create or replace   view dbt_dev.public.mart_sum_price_by_product
+  
+   as (
+    with source as (
+    select 
+    p.product_name,
+    sum(fs.quantity * fs.unit_price) sum_price
+    from dbt_dev.public.fact_sales fs
+    inner join dbt_dev.public.products p
+    on fs.product_id = p.id
+    where fs.quantity > 99
+    group by p.product_name
+)
+
+select 
+    *
+from source
+  );
+[0m15:01:32.216964 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:01:32.218230 [debug] [Thread-2 (]: Using snowflake connection "model.northwind.mart_top_customer_buy"
+[0m15:01:32.219412 [debug] [Thread-2 (]: On model.northwind.mart_top_customer_buy: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "node_id": "model.northwind.mart_top_customer_buy"} */
+create or replace   view dbt_dev.public.mart_top_customer_buy
+  
+   as (
+    with count as (
+    select 
+    concat(c.first_name,'',c.last_name) customer_name,
+    count(fp.quantity) as total_quantity
+    from fact_purchase_order fp
+    inner join customer c
+    on fp.customer_id = c.id
+    group by concat(c.first_name,'',c.last_name)
+)
+select 
+    customer_name, 
+    total_quantity
+from count
+where total_quantity > 10
+  );
+[0m15:01:32.220507 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:01:32.745530 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.528 seconds
+[0m15:01:32.759431 [debug] [Thread-1 (]: On model.northwind.mart_sum_price_by_product: Close
+[0m15:01:32.760265 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.540 seconds
+[0m15:01:32.764354 [debug] [Thread-2 (]: On model.northwind.mart_top_customer_buy: Close
+[0m15:01:32.895240 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9aecb020>]}
+[0m15:01:32.895910 [info ] [Thread-1 (]: 1 of 2 OK created sql view model public.mart_sum_price_by_product .............. [[32mSUCCESS 1[0m in 0.78s]
+[0m15:01:32.897629 [debug] [Thread-1 (]: Finished running node model.northwind.mart_sum_price_by_product
+[0m15:01:32.899300 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '062bb219-9e57-4a33-96d0-9b82e30714a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cb02390>]}
+[0m15:01:32.899747 [info ] [Thread-2 (]: 2 of 2 OK created sql view model public.mart_top_customer_buy .................. [[32mSUCCESS 1[0m in 0.78s]
+[0m15:01:32.900073 [debug] [Thread-2 (]: Finished running node model.northwind.mart_top_customer_buy
+[0m15:01:32.910003 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:01:32.910347 [debug] [MainThread]: Connection 'model.northwind.mart_sum_price_by_product' was properly closed.
+[0m15:01:32.910518 [debug] [MainThread]: Connection 'model.northwind.mart_top_customer_buy' was properly closed.
+[0m15:01:32.910901 [info ] [MainThread]: 
+[0m15:01:32.911215 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 2.35 seconds (2.35s).
+[0m15:01:32.911895 [debug] [MainThread]: Command end result
+[0m15:01:33.018648 [info ] [MainThread]: 
+[0m15:01:33.019004 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:01:33.019192 [info ] [MainThread]: 
+[0m15:01:33.019401 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m15:01:33.021179 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.312815, "process_user_time": 3.755369, "process_kernel_time": 0.983798, "process_mem_max_rss": "222192", "process_in_blocks": "323584", "process_out_blocks": "3061"}
+[0m15:01:33.021566 [debug] [MainThread]: Command `dbt run` succeeded at 15:01:33.021509 after 4.31 seconds
+[0m15:01:33.021800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9afb24e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b35f9e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e889940>]}
+[0m15:01:33.022006 [debug] [MainThread]: Flushing usage events
+[0m15:01:40.398974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f959700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f4667b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff806b8c50>]}
+
+
+============================== 15:01:40.403674 | 7e62ee01-0dca-40fc-b695-8088e8fbc9e8 ==============================
+[0m15:01:40.403674 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:01:40.404021 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/include/dbt/northwind', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/include/dbt/northwind/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt test', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:01:41.153192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e62ee01-0dca-40fc-b695-8088e8fbc9e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff63a8f470>]}
+[0m15:01:41.180557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e62ee01-0dca-40fc-b695-8088e8fbc9e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7faeaa50>]}
+[0m15:01:41.181362 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m15:01:41.240892 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m15:01:41.344938 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:01:41.345511 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:01:41.349842 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.northwind.example
+[0m15:01:41.401130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7e62ee01-0dca-40fc-b695-8088e8fbc9e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff63867f20>]}
+[0m15:01:41.486966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7e62ee01-0dca-40fc-b695-8088e8fbc9e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff631edaf0>]}
+[0m15:01:41.487354 [info ] [MainThread]: Found 19 seeds, 9 models, 2 data tests, 1 source, 459 macros
+[0m15:01:41.487573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e62ee01-0dca-40fc-b695-8088e8fbc9e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff636fa150>]}
+[0m15:01:41.489469 [info ] [MainThread]: 
+[0m15:01:41.490086 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:01:41.493808 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_dev_public'
+[0m15:01:41.505439 [debug] [ThreadPool]: Using snowflake connection "list_dbt_dev_public"
+[0m15:01:41.505755 [debug] [ThreadPool]: On list_dbt_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "connection_name": "list_dbt_dev_public"} */
+show objects in dbt_dev.public limit 10000
+[0m15:01:41.505916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:01:41.947824 [debug] [ThreadPool]: SQL status: SUCCESS 28 in 0.442 seconds
+[0m15:01:41.950177 [debug] [ThreadPool]: On list_dbt_dev_public: Close
+[0m15:01:42.088710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e62ee01-0dca-40fc-b695-8088e8fbc9e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff807977d0>]}
+[0m15:01:42.089242 [info ] [MainThread]: Concurrency: 200 threads (target='dev')
+[0m15:01:42.090383 [info ] [MainThread]: 
+[0m15:01:42.130471 [debug] [Thread-1 (]: Began running node test.northwind.not_null_dim_products_id.3a00ead9e8
+[0m15:01:42.130907 [info ] [Thread-1 (]: 1 of 2 START test not_null_dim_products_id ..................................... [RUN]
+[0m15:01:42.131213 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbt_dev_public, now test.northwind.not_null_dim_products_id.3a00ead9e8)
+[0m15:01:42.132054 [debug] [Thread-1 (]: Began compiling node test.northwind.not_null_dim_products_id.3a00ead9e8
+[0m15:01:42.132316 [debug] [Thread-2 (]: Began running node test.northwind.unique_dim_products_id.99cbf6b240
+[0m15:01:42.143782 [debug] [Thread-1 (]: Writing injected SQL for node "test.northwind.not_null_dim_products_id.3a00ead9e8"
+[0m15:01:42.138308 [info ] [Thread-2 (]: 2 of 2 START test unique_dim_products_id ....................................... [RUN]
+[0m15:01:42.144622 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.northwind.unique_dim_products_id.99cbf6b240'
+[0m15:01:42.144914 [debug] [Thread-2 (]: Began compiling node test.northwind.unique_dim_products_id.99cbf6b240
+[0m15:01:42.149391 [debug] [Thread-2 (]: Writing injected SQL for node "test.northwind.unique_dim_products_id.99cbf6b240"
+[0m15:01:42.150348 [debug] [Thread-1 (]: Began executing node test.northwind.not_null_dim_products_id.3a00ead9e8
+[0m15:01:42.162781 [debug] [Thread-1 (]: Writing runtime sql for node "test.northwind.not_null_dim_products_id.3a00ead9e8"
+[0m15:01:42.163740 [debug] [Thread-2 (]: Began executing node test.northwind.unique_dim_products_id.99cbf6b240
+[0m15:01:42.165461 [debug] [Thread-2 (]: Writing runtime sql for node "test.northwind.unique_dim_products_id.99cbf6b240"
+[0m15:01:42.166567 [debug] [Thread-1 (]: Using snowflake connection "test.northwind.not_null_dim_products_id.3a00ead9e8"
+[0m15:01:42.166875 [debug] [Thread-1 (]: On test.northwind.not_null_dim_products_id.3a00ead9e8: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "node_id": "test.northwind.not_null_dim_products_id.3a00ead9e8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from dbt_dev.public.dim_products
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:01:42.167092 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:01:42.168229 [debug] [Thread-2 (]: Using snowflake connection "test.northwind.unique_dim_products_id.99cbf6b240"
+[0m15:01:42.169046 [debug] [Thread-2 (]: On test.northwind.unique_dim_products_id.99cbf6b240: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "northwind", "target_name": "dev", "node_id": "test.northwind.unique_dim_products_id.99cbf6b240"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from dbt_dev.public.dim_products
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m15:01:42.169345 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:01:42.956717 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.789 seconds
+[0m15:01:42.964741 [debug] [Thread-1 (]: On test.northwind.not_null_dim_products_id.3a00ead9e8: Close
+[0m15:01:43.033281 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.864 seconds
+[0m15:01:43.040066 [debug] [Thread-2 (]: On test.northwind.unique_dim_products_id.99cbf6b240: Close
+[0m15:01:43.106143 [info ] [Thread-1 (]: 1 of 2 PASS not_null_dim_products_id ........................................... [[32mPASS[0m in 0.97s]
+[0m15:01:43.109025 [debug] [Thread-1 (]: Finished running node test.northwind.not_null_dim_products_id.3a00ead9e8
+[0m15:01:43.179756 [info ] [Thread-2 (]: 2 of 2 PASS unique_dim_products_id ............................................. [[32mPASS[0m in 1.04s]
+[0m15:01:43.180338 [debug] [Thread-2 (]: Finished running node test.northwind.unique_dim_products_id.99cbf6b240
+[0m15:01:43.201008 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:01:43.201402 [debug] [MainThread]: Connection 'test.northwind.not_null_dim_products_id.3a00ead9e8' was properly closed.
+[0m15:01:43.201622 [debug] [MainThread]: Connection 'test.northwind.unique_dim_products_id.99cbf6b240' was properly closed.
+[0m15:01:43.201853 [info ] [MainThread]: 
+[0m15:01:43.202086 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 1.71 seconds (1.71s).
+[0m15:01:43.202610 [debug] [MainThread]: Command end result
+[0m15:01:43.226368 [info ] [MainThread]: 
+[0m15:01:43.226880 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:01:43.227899 [info ] [MainThread]: 
+[0m15:01:43.228358 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m15:01:43.229546 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.8593676, "process_user_time": 2.991264, "process_kernel_time": 0.528646, "process_mem_max_rss": "218868", "process_in_blocks": "108640", "process_out_blocks": "2070"}
+[0m15:01:43.230209 [debug] [MainThread]: Command `dbt test` succeeded at 15:01:43.230085 after 2.86 seconds
+[0m15:01:43.230579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f959700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6383c080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f567fe0>]}
+[0m15:01:43.230872 [debug] [MainThread]: Flushing usage events

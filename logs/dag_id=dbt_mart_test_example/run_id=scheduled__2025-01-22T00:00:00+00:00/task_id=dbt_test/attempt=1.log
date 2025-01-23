@@ -1,0 +1,42 @@
+[2025-01-23T15:01:38.716+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-23T15:01:38.727+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_mart_test_example.dbt_test scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-23T15:01:38.731+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_mart_test_example.dbt_test scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-23T15:01:38.732+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-23T15:01:38.740+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): dbt_test> on 2025-01-22 00:00:00+00:00
+[2025-01-23T15:01:38.744+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=10683) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-23T15:01:38.745+0000] {standard_task_runner.py:72} INFO - Started process 10684 to run task
+[2025-01-23T15:01:38.746+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dbt_mart_test_example', 'dbt_test', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dbt_mart_creation.py', '--cfg-path', '/tmp/tmpnq2eg0aq']
+[2025-01-23T15:01:38.746+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask dbt_test
+[2025-01-23T15:01:38.786+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_mart_test_example.dbt_test scheduled__2025-01-22T00:00:00+00:00 [running]> on host c28716311b4b
+[2025-01-23T15:01:38.833+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_mart_test_example' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-23T15:01:38.833+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-23T15:01:38.837+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-23T15:01:38.838+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/include/dbt/northwind/ && dbt test']
+[2025-01-23T15:01:38.844+0000] {subprocess.py:99} INFO - Output:
+[2025-01-23T15:01:40.403+0000] {subprocess.py:106} INFO - [0m15:01:40  Running with dbt=1.8.7
+[2025-01-23T15:01:41.181+0000] {subprocess.py:106} INFO - [0m15:01:41  Registered adapter: snowflake=1.8.4
+[2025-01-23T15:01:41.350+0000] {subprocess.py:106} INFO - [0m15:01:41  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2025-01-23T15:01:41.350+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2025-01-23T15:01:41.350+0000] {subprocess.py:106} INFO - - models.northwind.example
+[2025-01-23T15:01:41.488+0000] {subprocess.py:106} INFO - [0m15:01:41  Found 19 seeds, 9 models, 2 data tests, 1 source, 459 macros
+[2025-01-23T15:01:41.489+0000] {subprocess.py:106} INFO - [0m15:01:41
+[2025-01-23T15:01:42.089+0000] {subprocess.py:106} INFO - [0m15:01:42  Concurrency: 200 threads (target='dev')
+[2025-01-23T15:01:42.091+0000] {subprocess.py:106} INFO - [0m15:01:42
+[2025-01-23T15:01:42.131+0000] {subprocess.py:106} INFO - [0m15:01:42  1 of 2 START test not_null_dim_products_id ..................................... [RUN]
+[2025-01-23T15:01:42.138+0000] {subprocess.py:106} INFO - [0m15:01:42  2 of 2 START test unique_dim_products_id ....................................... [RUN]
+[2025-01-23T15:01:43.107+0000] {subprocess.py:106} INFO - [0m15:01:43  1 of 2 PASS not_null_dim_products_id ........................................... [[32mPASS[0m in 0.97s]
+[2025-01-23T15:01:43.180+0000] {subprocess.py:106} INFO - [0m15:01:43  2 of 2 PASS unique_dim_products_id ............................................. [[32mPASS[0m in 1.04s]
+[2025-01-23T15:01:43.202+0000] {subprocess.py:106} INFO - [0m15:01:43
+[2025-01-23T15:01:43.202+0000] {subprocess.py:106} INFO - [0m15:01:43  Finished running 2 data tests in 0 hours 0 minutes and 1.71 seconds (1.71s).
+[2025-01-23T15:01:43.227+0000] {subprocess.py:106} INFO - [0m15:01:43
+[2025-01-23T15:01:43.227+0000] {subprocess.py:106} INFO - [0m15:01:43  [32mCompleted successfully[0m
+[2025-01-23T15:01:43.228+0000] {subprocess.py:106} INFO - [0m15:01:43
+[2025-01-23T15:01:43.229+0000] {subprocess.py:106} INFO - [0m15:01:43  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2025-01-23T15:01:44.680+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-23T15:01:44.719+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-23T15:01:44.721+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_mart_test_example, task_id=dbt_test, run_id=scheduled__2025-01-22T00:00:00+00:00, execution_date=20250122T000000, start_date=20250123T150138, end_date=20250123T150144
+[2025-01-23T15:01:44.767+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-23T15:01:44.778+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-23T15:01:44.782+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
