@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table dbt_dev.public.employee_privileges (employee_id integer,privilege_id integer)
+  ;
+    -- dbt seed --
+    
+            insert into dbt_dev.public.employee_privileges (employee_id, privilege_id) values
+            (%s,%s)
+        
+
+;
+  

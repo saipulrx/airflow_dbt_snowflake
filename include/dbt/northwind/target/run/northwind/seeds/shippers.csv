@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table dbt_dev.public.shippers (id integer,company text,last_name integer,first_name integer,email_address integer,job_title integer,business_phone integer,home_phone integer,mobile_phone integer,fax_number integer,address text,city text,state_province text,zip_postal_code integer,country_region text,web_page integer,notes integer,attachments integer)
+  ;
+    -- dbt seed --
+    
+            insert into dbt_dev.public.shippers (id, company, last_name, first_name, email_address, job_title, business_phone, home_phone, mobile_phone, fax_number, address, city, state_province, zip_postal_code, country_region, web_page, notes, attachments) values
+            (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

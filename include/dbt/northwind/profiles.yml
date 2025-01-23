@@ -1,0 +1,13 @@
+northwind:
+  outputs:
+    dev:
+      account: yw36449.ap-southeast-1
+      database: dbt_dev
+      password: <yourpassword>
+      role: dbt_dev_role
+      schema: public
+      threads: 200
+      type: snowflake
+      user: dbt_user
+      warehouse: dbt_dev_wh
+  target: dev
